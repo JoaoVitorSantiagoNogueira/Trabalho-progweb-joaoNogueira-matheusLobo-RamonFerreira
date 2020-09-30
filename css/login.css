@@ -4,7 +4,7 @@
 }
 
 body {
-  background: rgb(2, 0, 36);
+  /* background: rgb(2, 0, 36); */
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
@@ -15,6 +15,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+} 
+
+.dark-mode {
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .login-box {
@@ -44,4 +48,11 @@ body {
 #login-form input {
   align-self: center;
   color: black;
+}
+
+#darkmodeButton {
+  color: black;
+  position: absolute;
+  right: 30px;
+  top: 20px;
 }
