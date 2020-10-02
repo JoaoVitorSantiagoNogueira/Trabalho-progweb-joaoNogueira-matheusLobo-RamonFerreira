@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-} 
+}
 
 .dark-mode {
   background: rgba(0, 0, 0, 0.9);

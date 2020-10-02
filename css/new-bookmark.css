@@ -1,62 +1,65 @@
 * {
-    font-weight: bolder;
+  font-weight: bolder;
 }
-  
+
 body {
-    background: white;
-    color: black;
-    /* background: linear-gradient(
+  background: white;
+  color: black;
+  /* background: linear-gradient(
       90deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(124, 131, 94, 1) 35%,
       rgba(0, 212, 255, 1) 100%
     ); */
-    /* padding: 200px 200px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} 
-  
-.dark-mode {
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-}
-  
-.new-bookmark-box {
-    /* background-color: darksalmon; */
-    /* max-width: 50%; */
-    align-items: right;
-    flex-direction: column;
-    display: flex;
-    /* border: 2px solid red; */
-    padding: 15px;
-}
-  
-#new-bookmark-form {
-    display: flex;
-    flex-direction: row;
-    align-items: right;
-}
-  
-#new-bookmark-form label {
-    padding: 5px 5px 5px 15px;
-}
-  
-#new-bookmark-form input {
-    align-self: center;
-    color: black;
-    /* padding-left: 15px; */
-}
-  
-#darkmodeButton {
-    color: black;
-    position: absolute;
-    right: 30px;
-    top: 20px;
+  /* padding: 200px 200px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.menu{
-    flex-direction: row;
-    align-items: right;
+.dark-mode {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
 }
-  
+
+.dark-mode a {
+  color: yellow;
+}
+
+.new-bookmark-box {
+  /* background-color: darksalmon; */
+  /* max-width: 50%; */
+  align-items: right;
+  flex-direction: column;
+  display: flex;
+  /* border: 2px solid red; */
+  padding: 15px;
+}
+
+#new-bookmark-form {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+}
+
+#new-bookmark-form label {
+  padding: 5px 5px 5px 15px;
+}
+
+#new-bookmark-form input {
+  align-self: center;
+  color: black;
+  /* padding-left: 15px; */
+}
+
+#darkmodeButton {
+  color: black;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+.menu {
+  flex-direction: row;
+  align-items: right;
+}
