@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/flavicon.png">
+    <link rel="stylesheet" type="text/css" href="css/new-bookmark.css" />
+    <title>
+      Adicionar Bookmark
+    </title>
+  </head>
+  <body>
+    <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="new-bookmark.html">Novo bookmark</a>
+        <a href="del-bookmark">Excluir bookmark</a>
+    </div>
+
+    <h1>Adicione uma URL e um nome para lembrá-la:</h1>
+    <div class="new-bookmark-box">
+      <form action="" method="POST" id="new-bookmark-form">
+        <label for="pageTitle">Título</label>
+        <input type="text" name="pageTitle" />
+        <label for="url">URL</label>
+        <input type="url" name="url" />
+        <input id="submitInput" type="submit" value="Salvar" />
+      </form>
+    </div>
+
+    <button onclick="ToggleDarkMode()" id="darkmodeButton" value="myimage">
+      <img id="darkmodeIcon" src="img/moon.png" alt="Alternar modos de iluminação" height="25px" width="25px"/>
+    </button>
+    <script src="javascript/darkmode.js"></script>
+  </body>
+</html>
