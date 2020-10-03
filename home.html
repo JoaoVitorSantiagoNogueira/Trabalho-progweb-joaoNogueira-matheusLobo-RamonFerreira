@@ -6,7 +6,7 @@
     <link rel="icon" href="img/flavicon.png">
     <link rel="stylesheet" type="text/css" href="css/internal-pages.css" />
     <title>
-      Adicionar Bookmark
+      Home
     </title>
   </head>
   <body>
@@ -15,15 +15,15 @@
         <a href="new-bookmark.html">Novo bookmark</a>
     </div>
 
-    <h1>Adicione uma URL e um nome para lembrá-la:</h1>
-    <div class="new-bookmark-box">
-      <form action="" method="POST" id="new-bookmark-form">
-        <label for="pageTitle">Título</label>
-        <input type="text" name="pageTitle" />
-        <label for="url">URL</label>
-        <input type="url" name="url" />
-        <input id="submitInput" type="submit" value="Salvar" />
-      </form>
+    <h1 id="homeTitle">Sem Link, Sem Like</h1>
+    <div id="bookmarks-list">
+        <div class="search-box">
+            <label for="search">Busca</label>
+            <input type="search" id="search" name="search" placeholder="Título do bookmark">
+            <input type="button" value="Pesquisar">
+        </div>
+        <p>exemplo-de-bookmark 1</p>
+        <p>exemplo-de-bookmark 2</p>       
     </div>
 
     <button onclick="ToggleDarkMode()" id="darkmodeButton" value="myimage">

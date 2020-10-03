@@ -63,3 +63,19 @@ body {
   flex-direction: row;
   align-items: right;
 }
+
+.menu a {
+  padding-right: 5px;
+}
+
+#homeTitle {
+  align-self: center;
+}
+
+#bookmarks-list {
+  background-color: rgba(226, 143, 192, 0.3);
+  max-width: 75%;
+  align-self: center;
+  padding: 10px 500px 600px; 
+}
+
