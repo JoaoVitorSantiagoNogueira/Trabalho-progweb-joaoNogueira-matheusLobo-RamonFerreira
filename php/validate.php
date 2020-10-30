@@ -15,7 +15,9 @@
   	 	   echo "account not found";   
 		}else{
 		   //place holder
-   		   echo "logging in";   
+		   //echo "logging in";
+		   header('Location: ../home.html');
+		   exit;
 		}
 	}
 	$conn->close();
