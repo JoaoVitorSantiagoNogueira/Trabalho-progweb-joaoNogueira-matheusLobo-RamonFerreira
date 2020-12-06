@@ -50,6 +50,11 @@ body {
   color: black;
 }
 
+.login-box #signUpButton{
+  /*align-self: center;*/
+  color: black;
+}
+
 #darkmodeButton {
   color: black;
   position: absolute;

@@ -44,15 +44,16 @@ CREATE TABLE `url` (
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `nomeUsuario` varchar(20) NOT NULL,
-  `senha` varchar(20) NOT NULL
+  `senha` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='tabela basica de usuario';
 
 --
 -- Dumping data for table `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nomeUsuario`, `senha`) VALUES
-(1, 'a', 'b');
+INSERT INTO `usuario` (`id`, `nomeUsuario`, `senha`, `email`) VALUES
+(1, 'a', 'b', 'a@email.com');
 
 --
 -- Indexes for dumped tables
