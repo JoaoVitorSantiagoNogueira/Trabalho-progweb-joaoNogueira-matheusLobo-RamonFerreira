@@ -11,12 +11,11 @@
 			die('Error: ' . mysqli_error($conn));
     			}
 		if($query->num_rows == 0){
-		   //place holder
   	 	   echo "account not found";   
 		}else{
-		   //place holder
-		   //echo "logging in";
-		   header('Location: ../home.html');
+			setcookie("Username",$username, time() + 3600, "/");
+			setcookie("Password",$password, time() + 3600, "/");
+			header('Location: ../home.html');
 		   exit;
 		}
 	}

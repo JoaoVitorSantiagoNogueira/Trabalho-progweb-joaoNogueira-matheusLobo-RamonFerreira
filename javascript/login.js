@@ -1,4 +1,5 @@
 function signUp() {
+
     var form = document.getElementById("login-form");
 
     if(form.className == "login"){

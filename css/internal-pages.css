@@ -72,10 +72,20 @@ body {
   align-self: center;
 }
 
+#bookmarks-search {
+  background-color: rgba(85, 90, 87, 0.3);
+  max-width: 75%;
+  align-self: center;
+  padding: 10px 20px; 
+}
+
 #bookmarks-list {
   background-color: rgba(226, 143, 192, 0.3);
   max-width: 75%;
+  width: 700px;
+  height: 100px;
   align-self: center;
-  padding: 10px 500px 600px; 
+  text-align: center;
+  display: block;
 }
 

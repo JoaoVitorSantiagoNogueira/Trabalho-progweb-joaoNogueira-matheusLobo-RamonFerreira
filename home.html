@@ -8,6 +8,29 @@
     <title>
       Home
     </title>
+    <script src="javascript/displayBookMarks.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="javascript/getCookie.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+        $("#searchButton").click(function(){
+          $("#bookmarks-list").load("php/loadBookmarks.php", {
+            username : getCookie("Username"),
+            password : getCookie("Password"),
+            search : getInputValue()  
+          });
+        });
+      });
+    </script>
+
+
+
   </head>
   <body>
     <div class="menu">
@@ -16,12 +39,16 @@
     </div>
 
     <h1 id="homeTitle">Sem Link, Sem Like</h1>
-    <div id="bookmarks-list">
-        <div class="search-box">
-            <label for="search">Busca</label>
-            <input type="search" id="search" name="search" placeholder="Título do bookmark">
-            <input type="button" value="Pesquisar">
-        </div>
+    
+    <div id="bookmarks-search">
+      <div class="search-box">
+          <label for="search">Busca</label>
+          <input type="search" id="search" name="search" placeholder="Título do bookmark">
+          <input type="button" id="searchButton" value="Pesquisar">
+      </div>
+  </div>
+
+    <div id="bookmarks-list">      
         <p>exemplo-de-bookmark 1</p>
         <p>exemplo-de-bookmark 2</p>       
     </div>
@@ -31,4 +58,5 @@
     </button>
     <script src="javascript/darkmode.js"></script>
   </body>
+
 </html>
