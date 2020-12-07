@@ -31,6 +31,7 @@ USE gerenciadordb;
 
 CREATE TABLE `url` (
   `id` int(11) NOT NULL,
+  `titulo` text NOT NULL,
   `url` text NOT NULL,
   `usuarioID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

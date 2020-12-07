@@ -7,9 +7,12 @@
 	if($conn->connect_error){
 		die('Connection Failed : ' .$conn->connect_error);
 	}else{
-		$query= mysqli_query($conn , "SELECT url FROM url 
+		$query= mysqli_query($conn , "SELECT titulo, url FROM url 
                                       WHERE usuarioID = (SELECT id FROM usuario WHERE nomeUsuario = '".$username."' AND senha = '".$password."')
-                                      AND url LIKE '%".$search."%'");	
+                                      AND(
+										  url LIKE '%".$search."%' OR
+										  titulo LIKE '%".$search."%'
+										  );");	
 		if (!$query){
 			die('Error: ' . mysqli_error($conn));
     			}
@@ -17,7 +20,7 @@
             while ($row = mysqli_fetch_assoc($query))
             {
                 echo "<p>";
-                echo $row['url'];
+                echo $row['titulo'], "	", $row['url'];
                 echo "<p>";
             }
 		}else{
