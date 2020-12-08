@@ -30,27 +30,27 @@ body {
   /* background-color: darksalmon; */
   /* max-width: 50%; */
   align-items: right;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
   /* border: 2px solid red; */
   padding: 15px;
 }
 
-#new-bookmark-form {
+/*#new-bookmark-form {
   display: flex;
   flex-direction: row;
   align-items: right;
-}
+}*/
 
-#new-bookmark-form label {
+.new-bookmark-box label {
   padding: 5px 5px 5px 15px;
 }
 
-#new-bookmark-form input {
+/*.new-bookmark-box button {
   align-self: center;
   color: black;
-  /* padding-left: 15px; */
-}
+  padding-right: 150px;
+}*/
 
 #darkmodeButton {
   color: black;
@@ -88,4 +88,14 @@ body {
   text-align: center;
   display: block;
 }
+
+/*#statusAdd {
+  background-color: rgba(226, 143, 192, 0.3);
+  max-width: 75%;
+  width: 700px;
+  height: 100px;
+  align-self: center;
+  text-align: center;
+  display: block;
+}*/
 

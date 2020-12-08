@@ -23,7 +23,7 @@
           $("#bookmarks-list").load("php/loadBookmarks.php", {
             username : getCookie("Username"),
             password : getCookie("Password"),
-            search : getInputValue()  
+            search : getInputValue("search")  
           });
         });
       });

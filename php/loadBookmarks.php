@@ -19,8 +19,9 @@
 		if($query->num_rows > 0){
             while ($row = mysqli_fetch_assoc($query))
             {
+				$title = $row['titulo'];
                 echo "<p>";
-                echo $row['titulo'], "	", $row['url'];
+                echo "<a href='".$row['url']."'>$title</a>";
                 echo "<p>";
             }
 		}else{

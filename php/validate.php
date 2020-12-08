@@ -16,9 +16,9 @@
 			setcookie("Username",$username, time() + 3600, "/");
 			setcookie("Password",$password, time() + 3600, "/");
 			header('Location: ../home.html');
-		   exit;
 		}
 	}
 	$conn->close();
 	$query->close();
+	exit();
 ?>

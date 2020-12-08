@@ -13,15 +13,16 @@
 			die('Error: ' . mysqli_error($conn));
     			}
 		if($query->num_rows == 0){
-           $cadastro = mysqli_query($conn, "INSERT INTO usuario (nomeUsuario, senha, email) VALUES ('".$username."', '".$password."', '".$email."')"); 
+		   $cadastro = mysqli_query($conn, "INSERT INTO usuario (nomeUsuario, senha, email) VALUES ('".$username."', '".$password."', '".$email."')");
+		   setcookie("Username",$username, time() + 3600, "/");
+		   setcookie("Password",$password, time() + 3600, "/");
            header('Location: ../home.html');
-           exit;
 		}else{
 		   echo "Email ja cadastrado";
 		   //header('Location: ../home.html');
-		   exit;
 		}
 	}
 	$conn->close();
 	$query->close();
+	exit();
 ?>
