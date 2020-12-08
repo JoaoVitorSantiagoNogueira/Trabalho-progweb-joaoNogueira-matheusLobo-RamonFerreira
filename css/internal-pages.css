@@ -26,7 +26,7 @@ body {
   color: yellow;
 }
 
-.new-bookmark-box {
+.form-boxes {
   /* background-color: darksalmon; */
   /* max-width: 50%; */
   align-items: right;
@@ -36,13 +36,7 @@ body {
   padding: 15px;
 }
 
-/*#new-bookmark-form {
-  display: flex;
-  flex-direction: row;
-  align-items: right;
-}*/
-
-.new-bookmark-box label {
+.form-boxes label {
   padding: 5px 5px 5px 15px;
 }
 
