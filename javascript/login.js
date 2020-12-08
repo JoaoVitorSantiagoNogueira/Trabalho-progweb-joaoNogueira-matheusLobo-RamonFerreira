@@ -21,6 +21,8 @@ function signUp() {
 
         form.className = "signup";
         form.action = "php/add_user.php";
+
+        document.getElementById("signUpButton").innerHTML = "Faça Login";
     }
     else{
         button = form.removeChild(form.lastElementChild);
@@ -32,6 +34,8 @@ function signUp() {
 
         form.className = "login";
         form.action = "php/validate.php";
+
+        document.getElementById("signUpButton").innerHTML = "Cadastre-se";
     }
 }
   

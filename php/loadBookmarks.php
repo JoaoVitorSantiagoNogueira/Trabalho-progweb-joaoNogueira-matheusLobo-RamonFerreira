@@ -26,7 +26,7 @@
             }
 		}else{
             echo "<p>";
-            echo "no match ;~;";
+            echo "Nenhum resultado encontrado";
             echo "<p>";
 		   exit;
 		}
