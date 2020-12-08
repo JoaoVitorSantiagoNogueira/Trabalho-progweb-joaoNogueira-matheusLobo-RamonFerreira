@@ -19,11 +19,20 @@
     <script>
       $(document).ready(function(){
         $("#newBookmarkButton").click(function(){
-          $("#statusAdd").load("php/addBookmarks.php", {
-            username : getCookie("Username"),
-            password : getCookie("Password"),
-            title : getInputValue("pageTitle"),
-            url : getInputValue("url")  
+          var title = $("#pageTitle").val();
+          var url = $("#url").val();
+          $.ajax({
+            url:'php/addBookmarks.php',
+            method:'POST',
+            data:{
+              username : getCookie("Username"),
+              password : getCookie("Password"),
+              title : title,
+              url : url,
+            },
+            success:function(data){
+                alert(data);
+            }
           });
         });
       });

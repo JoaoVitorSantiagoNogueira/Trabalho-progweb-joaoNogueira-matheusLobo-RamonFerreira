@@ -9,31 +9,35 @@
 	if($conn->connect_error){
 		die('Connection Failed : ' .$conn->connect_error);
 	}else{
-        $user_id = mysqli_query($conn , "SELECT id FROM usuario WHERE nomeUsuario = '".$username."' AND senha = '".$password."')");
-
+        if($id_query = mysqli_query($conn , "SELECT id FROM usuario WHERE nomeUsuario = '".$username."' AND senha = '".$password."';")){
+            $row = mysqli_fetch_assoc($id_query);
+            $user_id = $row['id'];
+        }else{
+            echo "Erro : ", mysqli_error($conn);
+            exit();
+        }
+     
         $query = mysqli_query($conn , "SELECT titulo, url FROM url 
-                                      WHERE usuarioID = $user_id
+                                      WHERE usuarioID = '".$user_id."'
                                       AND(
-										  url LIKE '%".$url."%' OR
-										  titulo LIKE '%".$title."%'
-										  );");	
+										  url = '".$url."' OR
+										  titulo = '".$title."'
+                                          );");	
+                                          
 		if (!$query){
 			die('Error: ' . mysqli_error($conn));
     			}
 		if($query->num_rows > 0){
-            echo "<p>";
             echo "Este bookmark já está salvo!";
-            echo "<p>";
 		}else{
-            $insertion = mysqli_query($conn, "INSERT INTO `url` (title, `url`, usuarioID) VALUES ('".$title."'", $url, $user_id));
-            echo "<p>";
-            echo "Adicionado!";
-            echo "<p>";
+            if($insertion = mysqli_query($conn, "INSERT INTO `url` (titulo, url, usuarioID) VALUES ('".$title."', '".$url."', '".$user_id."');")){
+                echo "Adicionado!";
+            }
+            else{
+                echo "Erro: ", mysqli_error($conn);
+            }
 		}
 	}
 	$conn->close();
-    $query->close();
-    $user_id->close();
-    $insertion->close();
     exit();
 ?>
