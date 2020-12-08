@@ -22,7 +22,7 @@
           var title = $("#pageTitle").val();
           var url = $("#url").val();
           $.ajax({
-            url:'php/addBookmarks.php',
+            url:'../back-end/php/addBookmarks.php',
             method:'POST',
             data:{
               username : getCookie("Username"),
@@ -44,7 +44,7 @@
           var removeTitle = $("#titleRemove").val();
           var removeUrl = $("#urlRemove").val();
           $.ajax({
-            url:'php/removeBookmarks.php',
+            url:'../back-end/php/removeBookmarks.php',
             method:'POST',
             data:{
               username : getCookie("Username"),

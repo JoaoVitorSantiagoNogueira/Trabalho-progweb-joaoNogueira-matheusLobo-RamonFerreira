@@ -20,7 +20,7 @@
     <script>
       $(document).ready(function(){
           $("#searchButton").click(function(){
-          $("#bookmarks-list").load("php/loadBookmarks.php", {
+          $("#bookmarks-list").load("../back-end/php/loadBookmarks.php", {
             username : getCookie("Username"),
             password : getCookie("Password"),
             search : getInputValue("search")  
@@ -33,7 +33,7 @@
     <script>
       $(document).ready(function(){
           setInterval(function(){
-          $("#bookmarks-list").load("php/loadBookmarks.php", {
+          $("#bookmarks-list").load("../back-end/php/loadBookmarks.php", {
             username : getCookie("Username"),
             password : getCookie("Password"),
             search : getInputValue("search")  

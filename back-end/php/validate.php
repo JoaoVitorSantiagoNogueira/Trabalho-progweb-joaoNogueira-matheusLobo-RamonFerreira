@@ -15,7 +15,7 @@
 		}else{
 			setcookie("Username",$username, time() + 3600, "/");
 			setcookie("Password",$password, time() + 3600, "/");
-			header('Location: ../home.html');
+			header('Location: ../../front-end/home.html');
 		}
 	}
 	$conn->close();
