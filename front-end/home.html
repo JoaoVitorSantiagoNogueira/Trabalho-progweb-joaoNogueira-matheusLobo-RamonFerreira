@@ -17,6 +17,9 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script src="javascript/getCookie.js"></script>
     
+    <meta name="google-signin-client_id" content="784970091266-a0fashn2v9auf1ijjoi564570vr7fpad.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
     <script>
       $(document).ready(function(){
           $("#searchButton").click(function(){
@@ -60,7 +63,7 @@
           <input type="search" id="search" name="search" placeholder="Título do bookmark">
           <input type="button" id="searchButton" value="Pesquisar">
       </div>
-  </div>
+    </div>
 
     <div id="bookmarks-list">          
     </div>
@@ -69,6 +72,9 @@
       <img id="darkmodeIcon" src="img/moon.png" alt="Alternar modos de iluminação" height="25px" width="25px"/>
     </button>
     <script src="javascript/darkmode.js"></script>
+
+    <button onclick="LogOut()" id="logOutButton" value="Sair">Sair</button>
+    <script src="javascript/logout.js"></script>
   </body>
 
 </html>

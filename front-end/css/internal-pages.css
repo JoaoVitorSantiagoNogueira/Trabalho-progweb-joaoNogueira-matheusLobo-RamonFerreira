@@ -83,6 +83,13 @@ body {
   display: block;
 }
 
+#logOutButton {
+  color: black;
+  position: absolute;
+  right: 80px;
+  top: 20px;
+}
+
 /*#statusAdd {
   background-color: rgba(226, 143, 192, 0.3);
   max-width: 75%;
