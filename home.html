@@ -19,15 +19,30 @@
     
     <script>
       $(document).ready(function(){
-        $("#searchButton").click(function(){
+          $("#searchButton").click(function(){
           $("#bookmarks-list").load("php/loadBookmarks.php", {
             username : getCookie("Username"),
             password : getCookie("Password"),
             search : getInputValue("search")  
-          });
+           });
+         });
         });
-      });
+        
     </script>
+
+    <script>
+      $(document).ready(function(){
+          setInterval(function(){
+          $("#bookmarks-list").load("php/loadBookmarks.php", {
+            username : getCookie("Username"),
+            password : getCookie("Password"),
+            search : getInputValue("search")  
+           });
+         },1000);
+        });
+    </script>
+
+
 
   </head>
   <body>
