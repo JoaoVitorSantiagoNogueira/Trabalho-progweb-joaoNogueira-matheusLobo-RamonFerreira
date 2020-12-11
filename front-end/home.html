@@ -24,8 +24,8 @@
       $(document).ready(function(){
           $("#searchButton").click(function(){
           $("#bookmarks-list").load("../back-end/php/loadBookmarks.php", {
-            username : getCookie("Username"),
-            password : getCookie("Password"),
+            username : localStorage.getItem("username"),
+            password : localStorage.getItem("password"),
             search : getInputValue("search")  
            });
          });
@@ -37,8 +37,8 @@
       $(document).ready(function(){
           setInterval(function(){
           $("#bookmarks-list").load("../back-end/php/loadBookmarks.php", {
-            username : getCookie("Username"),
-            password : getCookie("Password"),
+            username : localStorage.getItem("username"),
+            password : localStorage.getItem("password"),
             search : getInputValue("search")  
            });
          },1000);

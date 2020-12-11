@@ -17,7 +17,7 @@
     <meta name="google-signin-client_id" content="784970091266-a0fashn2v9auf1ijjoi564570vr7fpad.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-    <script>
+    <script type="text/javascript">
       $(document).ready(function(){
         $("#submitInput").click(function(){
           var username1 = $("#username").val();
@@ -30,7 +30,13 @@
               password : password1,
             },
             success:function(data){
-                alert(data);
+              if (data="true"){
+              //alerta pra senha de confirmação
+              // if senha ta certa
+              localStorage.setItem("password", password1);
+              localStorage.setItem("username", username1);
+              window.location.href = "home.html"
+              }
             }
           });
         });
@@ -39,7 +45,6 @@
 
   </head>
 
-  
   <body>
     <div class="login-box" id="login-box">
       <img src="img/logo.png" alt="joinha-logo" height="100px" width="100px" />
@@ -47,9 +52,9 @@
       <p>Onde seus links estão a salvo, com aprovação da chefia.</p>
       <div id="login-form" class="login">
         <label for="username">Usuário</label>
-        <input type="text" name="username" />
+        <input type ="text" id="username" />
         <label for="password">Senha</label>
-        <input type="password" name="password" /><br />
+        <input type="password" id="password" /><br />
         <input id="submitInput" type="button" value="Login" />
       </div>
       <p>Ou </p>
