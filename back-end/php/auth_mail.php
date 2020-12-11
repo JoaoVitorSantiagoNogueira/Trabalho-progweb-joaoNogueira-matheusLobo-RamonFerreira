@@ -33,7 +33,7 @@
 
         try {
             $mail->send();
-            echo "Message has been sent successfully";
+            //echo "Message has been sent successfully";
         } catch (Exception $e) {
             echo "Mailer Error: " . $mail->ErrorInfo;
         }
