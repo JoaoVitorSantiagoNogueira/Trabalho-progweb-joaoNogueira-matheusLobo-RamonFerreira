@@ -20,10 +20,10 @@
     <script>
       $(document).ready(function(){
           $("#searchButton").click(function(){
-          $("#bookmarks-list").load("../back-end/php/loadBookmarks.php", {
-            username : localStorage.getItem("username"),
-            password : localStorage.getItem("password"),
-            search : getInputValue("search")  
+            $("#bookmarks-list").load("../back-end/php/loadBookmarks.php", {
+              username : localStorage.getItem("username"),
+              password : localStorage.getItem("password"),
+              search : getInputValue("search")  
            });
          });
         });

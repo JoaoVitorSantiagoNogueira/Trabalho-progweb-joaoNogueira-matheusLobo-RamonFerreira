@@ -16,7 +16,7 @@
 		   $cadastro = mysqli_query($conn, "INSERT INTO usuario (nomeUsuario, senha, email) VALUES ('".$username."', '".$password."', '".$email."')");
 		   setcookie("Username",$username, time() + 3600, "/");
 		   setcookie("Password",$password, time() + 3600, "/");
-           header('Location: ../../front-end/home.html');
+           //header('Location: ../../front-end/home.html');
 		}else{
 		   echo "Email ja cadastrado";
 		   //header('Location: ../home.html');

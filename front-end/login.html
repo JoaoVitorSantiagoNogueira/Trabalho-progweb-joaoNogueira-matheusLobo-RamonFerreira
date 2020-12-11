@@ -22,20 +22,30 @@
         $("#submitInput").click(function(){
           var username1 = $("#username").val();
           var password1 = $("#password").val();
+          var email1 = $("#email").val();
           $.ajax({
-            url:'../back-end/php/validate.php',
+            url: getLink(),
             method:'POST',
             data:{
               username : username1,
               password : password1,
+              email : email1
             },
             success:function(data){
-              if (data="true"){
-              //alerta pra senha de confirmação
-              // if senha ta certa
-              localStorage.setItem("password", password1);
-              localStorage.setItem("username", username1);
-              window.location.href = "home.html"
+              if (data.match(/true/)){
+                var cod  = data.substr(4);
+                var aut_code = prompt("Entre com o código de autenticação", "000000");//alerta pra senha de confirmação
+                if (aut_code == cod){
+                  localStorage.setItem("password", password1);
+                  localStorage.setItem("username", username1);
+                  window.location.href = "home.html";
+                }
+                else{
+                  alert("Código incorreto");
+                }
+              }
+              else{
+                alert(data);
               }
             }
           });

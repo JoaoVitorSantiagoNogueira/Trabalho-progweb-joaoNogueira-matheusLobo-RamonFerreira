@@ -1,6 +1,6 @@
 <?php
 
-	//	include 'auth_mail.php';
+	include 'auth_mail.php';
 
 	$username = $_POST['username'];
 	$password = $_POST['password'];
@@ -14,12 +14,13 @@
 			die('Error: ' . mysqli_error($conn));
     			}
 		if($query->num_rows == 0){
-  	 	   echo "account not found";   
+  	 	   echo "Usuário ou senha incorretos";   
 		}else{
-			//$email_address = mysqli_fetch_assoc($query)['email'];
-			//$aut_code = rand(100000, 999999);
-			//sendEmail($email_address, $username, $aut_code);
+			$email_address = mysqli_fetch_assoc($query)['email'];
+			$aut_code = rand(100000, 999999);
+			sendEmail($email_address, $username, $aut_code);
 			echo "true";
+			echo $aut_code;
 		}
 	}
 	$conn->close();
