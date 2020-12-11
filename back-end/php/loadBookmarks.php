@@ -33,4 +33,5 @@
 	}
 	$conn->close();
 	$query->close();
+	exit();
 ?>

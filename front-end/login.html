@@ -70,15 +70,27 @@
           var profile = googleUser.getBasicProfile();
           var username1 = profile.getName();
           var email1 = profile.getEmail();
-          //window.location.href = "../back-end/php/validateAPI.php?username=" + username1 + "&email=" + email1;
-          // $.ajax({
-          //     url:'php/validateAPI.php',
-          //     method:'POST',
-          //     data:{
-          //       username : username1,
-          //       email : email1,
-          //     },
-          // });
+          $.ajax({
+               url:'php/validateAPI.php',
+               method:'POST',
+               data:{
+                username : username1,
+                email : email1,
+               },
+              success:function(data){
+             // alert (data)
+             // if (data="a"){
+             // localStorage.setItem("password", password1);
+              //localStorage.setItem("username", username1);
+              //window.location.href = "home.html"
+              //  }
+              //if (data="b"){
+              //localStorage.setItem("password", password1);
+              //localStorage.setItem("username", username1);
+              window.location.href = "home.html";
+              //  }
+             }
+          });
         }
       </script>
 

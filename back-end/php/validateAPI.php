@@ -1,5 +1,4 @@
 <?php
-    echo "z";
 	$username = $_GET['username'];
 	$email = $_GET['email'];
 	//database conection
@@ -17,9 +16,11 @@
             echo "a";
             $password = rand(10000000,99999999);
             $cadastro = mysqli_query($conn, "INSERT INTO usuario (nomeUsuario, senha, email) VALUES ('".$username."', '".$password."', '".$email."')");
+			exit;
 		}else{
             echo "b";
-            $password = mysqli_fetch_assoc($query)['password'];
+			$password = mysqli_fetch_assoc($query)['senha'];
+			exit;
 		}
 	}
 	$conn->close();
