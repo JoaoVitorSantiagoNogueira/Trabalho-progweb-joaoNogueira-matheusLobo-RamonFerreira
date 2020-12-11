@@ -15,7 +15,7 @@
     			}
 		if($query->num_rows == 0){
             echo "a";
-            $password = rand(100000,99999999);
+            $password = rand(10000000,99999999);
             $cadastro = mysqli_query($conn, "INSERT INTO usuario (nomeUsuario, senha, email) VALUES ('".$username."', '".$password."', '".$email."')");
             setcookie("Username",$username, time() + 3600, "/");
             setcookie("Password",$password, time() + 3600, "/");

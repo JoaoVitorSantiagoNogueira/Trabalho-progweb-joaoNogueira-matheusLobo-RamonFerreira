@@ -17,6 +17,26 @@
     <meta name="google-signin-client_id" content="784970091266-a0fashn2v9auf1ijjoi564570vr7fpad.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
+    <script>
+      $(document).ready(function(){
+        $("#submitInput").click(function(){
+          var username1 = $("#username").val();
+          var password1 = $("#password").val();
+          $.ajax({
+            url:'../back-end/php/validate.php',
+            method:'POST',
+            data:{
+              username : username1,
+              password : password1,
+            },
+            success:function(data){
+                alert(data);
+            }
+          });
+        });
+      });
+    </script>
+
   </head>
 
   
@@ -25,13 +45,13 @@
       <img src="img/logo.png" alt="joinha-logo" height="100px" width="100px" />
       <h2>Sem link, sem like</h2>
       <p>Onde seus links estão a salvo, com aprovação da chefia.</p>
-      <form action="../back-end/php/validate.php" method="POST" id="login-form" class="login">
+      <div id="login-form" class="login">
         <label for="username">Usuário</label>
         <input type="text" name="username" />
         <label for="password">Senha</label>
         <input type="password" name="password" /><br />
-        <input id="submitInput" type="submit" value="Login" />
-      </form>
+        <input id="submitInput" type="button" value="Login" />
+      </div>
       <p>Ou </p>
 
       <button onclick="signUp()" id="signUpButton">Cadastre-se</button>
@@ -39,12 +59,13 @@
       <br>
       <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
       <!--<script src="javascript/loginAPI.js"></script>!-->
+
       <script>
         function onSignIn(googleUser) {
           var profile = googleUser.getBasicProfile();
           var username1 = profile.getName();
           var email1 = profile.getEmail();
-          window.location.href = "../back-end/php/validateAPI.php?username=" + username1 + "&email=" + email1;
+          //window.location.href = "../back-end/php/validateAPI.php?username=" + username1 + "&email=" + email1;
           // $.ajax({
           //     url:'php/validateAPI.php',
           //     method:'POST',

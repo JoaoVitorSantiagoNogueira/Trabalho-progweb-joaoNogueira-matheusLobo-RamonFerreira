@@ -20,7 +20,7 @@ function signUp() {
         form.appendChild(button);
 
         form.className = "signup";
-        form.action = "php/add_user.php";
+        form.action = "../back-end/php/add_user.php";
 
         document.getElementById("signUpButton").innerHTML = "Faça Login";
     }
@@ -33,7 +33,7 @@ function signUp() {
         form.appendChild(button);
 
         form.className = "login";
-        form.action = "php/validate.php";
+        form.action = "../back-end/php/validate.php";
 
         document.getElementById("signUpButton").innerHTML = "Cadastre-se";
     }
